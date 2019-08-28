@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    /* Bài toán: Gỉa sử điểm kiểm tra hệ số 1, điểm giữa kì hệ số 2, điểm cuối kì hệ số 3, xếp loại dựa trên công thức
+    xếp loại = tổng điểm nhân các hệ số rồi chia cho 6. Nếu xếp loại trên 8.0 thì học sinh xếp loại giỏi, từ 6.5 đến 8.0
+    xếp loại khá, từ 5.0 đến 6.5 xếp loại trung bình, từ 3.5-5.0 loại yếu, thấp hơn 3.5 các loại cá biệt khác*/
+    let diemkt= parseFloat(prompt("Nhập vào điểm kiểm tra:"));
+    let diemguaki = parseFloat(prompt("Nhập vào điểm giữa kì:"));
+    let diemcuoiki = parseFloat(prompt("Nhập vào điểm cuối kì"));
+    let xeploai = (diemkt+diemcuoiki*3+diemguaki*2)/6;
+   while (xeploai>=8.0){xeploai=document.write("Học sinh xếp loại giỏi");}
+   while ((6.5<=xeploai)&&(xeploai<8.0)){xeploai=document.write("Học sinh xếp loại khá");}
+   while ((5.0<=xeploai)&&(xeploai<6.5)){xeploai=document.write("Học sinh xếp loại trung bình");}
+   while ((3.5<=xeploai)&&(xeploai<5.0)){xeploai=document.write("Học sinh xếp loại yếu");}
+   while (xeploai<3.5){xeploai=document.write("Các loại học sinh cá biệt khác");}
+</script>
+</body>
+</html>

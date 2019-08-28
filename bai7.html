@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai toan tinh cuoc dien thoai</title>
+</head>
+<body>
+<script>
+    /* Bài toán thực tế: Tiền cước điện thoại cho một hộ gia đình tính theo các thông số sau:
+    - Phí thuê bao bắt buộc là 25 nghìn.
+    - 600 đồng cho mỗi phút gọi của 50 phút đầu tiên.
+    - 400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+    - 200 đồng cho bất kỳ phút gọi nào sau 200 phút đầu tiên.
+     */
+    let phut=parseInt(prompt("Nhập vào số phút đã dùng:"));
+    let thanhtien;
+    if(phut>200){
+        thanhtien=25000+50*600+150*400+(phut-200)*200;
+        document.write("Tiền cước là:"+thanhtien+"VNĐ");}
+    else if (phut >= 150) {
+            thanhtien = 25000 + 50 * 600 + (phut - 50) * 400;
+            document.write("Tiền cước là:" + thanhtien + "VNĐ");
+    }
+    else {
+        thanhtien=25000+phut*600;
+        document.write("Tiền cước là:"+thanhtien+"VNĐ");
+    }
+</script>
+</body>
+</html>

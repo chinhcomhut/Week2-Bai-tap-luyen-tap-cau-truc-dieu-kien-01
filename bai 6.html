@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6 Bai toan hoa hong </title>
+</head>
+<body>
+<script>
+    /* Bài toán thực tế: Gỉa sử một công ty có chính sách trả hoa hồng cho nhân viên bán hàng như sau:
+    + Từ 0 -> 200.000VNĐ hoa hồng 3%.
+    + Từ 200 -> 500.000VNĐ hoa hồng 5%
+    + Trên 500 hoa hồng 10%
+     Giả sử hóa đơn của khách hàng là 700.000 thì tiền hoa hồng bạn nhận được là:
+     200.000 x 3% + (500.000 - 200.000) x 5% + (700.000 - 500.000) x 10% = 41.000 VNĐ*/
+    let doanhso=parseInt(prompt("Nhập vào doanh số bán hàng:"));
+    let hoahong;
+    if(doanhso<=200000){
+        hoahong=3*doanhso/100;
+    document.write("hoa hồng nhân viên nhận được:"+hoahong+"VNĐ");
+    }
+   if((200000<doanhso)&&(doanhso<500000)){
+    hoahong=((doanhso-200000)*5+(200000*3))/100;
+    document.write("hoa hồng nhân viên nhận được:"+hoahong+"VNĐ");
+   }
+    if(doanhso>500000){
+        hoahong=(200000*3+300000*5+(doanhso-500000)*10)/100;
+        document.write("hoa hồng nhân viên nhận được:"+hoahong+"VNĐ");
+    }
+</script>
+</body>
+</html>
